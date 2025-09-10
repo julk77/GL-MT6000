@@ -2,19 +2,17 @@ uci -q batch << EOI
 
 # Wireless radio0 specific settings
 set wireless.radio0.htmode='HE40'
-set wireless.radio0.channel='auto'
-set wireless.radio0.country='PT'
+set wireless.radio0.channel='13'
+set wireless.radio0.country='DE'
 
 # Wireless radio1 specific settings
-set wireless.radio1.htmode='HE160'
+set wireless.radio1.htmode='HE80'
 set wireless.radio1.channel='auto'
-set wireless.radio1.country='PT'
+set wireless.radio1.country='DE'
 
 # Firewall settings
-set firewall.@zone[1].input='DROP'
-set firewall.@zone[1].forward='DROP'
+set firewall.@zone[1].input='ACCEPT'
+set firewall.@zone[1].forward='ACCEPT'
 
-# uHTTPd settings
-set uhttpd.main.redirect_https='1'
 
 EOI
